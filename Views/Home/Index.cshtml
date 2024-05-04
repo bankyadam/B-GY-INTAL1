@@ -1,0 +1,15 @@
+﻿@model B_GY_INTAL1.Models.OperationModel
+
+@using B_GY_INTAL1.Enum
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+
+@using (Html.BeginForm("Step2", "Home", FormMethod.Post))
+{
+    <div>
+        <input type="number" value="" asp-for="A" placeholder="ertek 1">
+        <select asp-for="Operator" asp-items="Html.GetEnumSelectList<Operator>()"></select>
+        <input type="number" value="" asp-for="B" placeholder="ertek 1">
+
+        <input type="submit" value="=">
+    </div>
+}

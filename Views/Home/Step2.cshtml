@@ -1,0 +1,7 @@
+﻿@using B_GY_INTAL1.Extensions
+@model B_GY_INTAL1.Models.OperationModel
+
+<div>
+    @Model.A @Model.Operator.GetDisplayName() @Model.B = @Model.Result
+</div>
+<div>@Html.ActionLink("újra", "Index")</div>
