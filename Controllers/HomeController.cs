@@ -15,11 +15,6 @@ public class HomeController : Controller
     [HttpPost]
     public ActionResult Step2(OperationModel operationModel)
     {
-        Console.Out.WriteLine("=====================");
-        Console.Out.WriteLine(operationModel.A);
-        Console.Out.WriteLine(operationModel.Operator);
-        Console.Out.WriteLine(operationModel.B);
-
         switch (operationModel.Operator)
         {
             case Operator.Add:
