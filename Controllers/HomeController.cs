@@ -29,7 +29,11 @@ public class HomeController : Controller
             case Operator.Div:
                 if (operationModel.B != 0)
                     operationModel.Result = operationModel.A / operationModel.B;
+                else
+                    throw new ArithmeticException();
                 break;
+            default:
+                throw new ArgumentOutOfRangeException();
         }
 
         return View(operationModel);
